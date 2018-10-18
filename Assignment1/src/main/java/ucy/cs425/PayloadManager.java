@@ -13,7 +13,7 @@ class PayloadManager {
      *
      * @return Random number between 300 and 2000
      */
-    private int generateRandomNumber() {
+    private static int generateRandomNumber() {
 
         final int max = 2000, min = 300;
         final int range = (max - min) + 1;
@@ -25,7 +25,7 @@ class PayloadManager {
     /**
      * @return Payload representing a string message
      */
-    public String getPayload() {
+    public static String getPayload() {
 
         long size = generateRandomNumber() * 1024;
         StringBuilder sb = new StringBuilder();
