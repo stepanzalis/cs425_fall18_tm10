@@ -10,7 +10,7 @@ import java.net.Socket;
  * @author Stepan Zalis
  * created on 2018/10/16
  */
-public class WorkerTCP {
+public class WorkerTCP implements Runnable{
 
     private final Socket client;
     private String buffer;
@@ -27,6 +27,7 @@ public class WorkerTCP {
     /**
      * Main running method
      */
+    @Override
     public void run() {
 
         try {

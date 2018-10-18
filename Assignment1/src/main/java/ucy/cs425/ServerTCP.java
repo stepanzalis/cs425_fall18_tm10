@@ -3,6 +3,8 @@ package main.java.ucy.cs425;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class ServerTCP {
 
@@ -11,6 +13,9 @@ public class ServerTCP {
 
     public static void main(String[] args) {
 
+        // create thread pool for 10 thread
+        ExecutorService workerService = Executors.newFixedThreadPool(10);
+
         final int port = Integer.parseInt(args[0]);
         final int numberOfRepetition = Integer.parseInt(args[1]);
 
@@ -18,15 +23,12 @@ public class ServerTCP {
             ServerSocket socket = new ServerSocket(port);
 
             while (true) {
-
                 Socket client = socket.accept();
-
-                // TODO: create multithreaded scheduler
+                workerService.submit(new WorkerTCP(client, numberOfRepetition));
             }
 
         } catch (IOException io) {
             io.getLocalizedMessage();
         }
-
     }
 }
