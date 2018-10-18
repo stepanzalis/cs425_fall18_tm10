@@ -6,6 +6,12 @@ import java.net.Socket;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ * Main class representing TCP Server
+ * Consumes two arguments: [0] - port; [1] - limit number of requests
+ *
+ * @author Stepan Zalis
+ */
 public class ServerTCP {
 
     static long startTime;
@@ -32,10 +38,6 @@ public class ServerTCP {
         } catch (IOException io) {
             io.getLocalizedMessage();
         }
-    }
-
-    public static long getStartTime() {
-        return startTime;
     }
 
     public static void resetStartTime() {
