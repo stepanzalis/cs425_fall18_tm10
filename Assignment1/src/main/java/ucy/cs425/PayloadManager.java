@@ -1,4 +1,5 @@
-package ucy.cs425;
+package main.java.ucy.cs425;
+
 import java.util.Random;
 
 /**
@@ -6,16 +7,17 @@ import java.util.Random;
  * created on 2018/10/16
  */
 class PayloadManager {
-    
+
     /**
      * Generating random number in range between 300 to 2000 which simulates random amount of bits
+     *
      * @return Random number between 300 and 2000
      */
     private int generateRandomNumber() {
-    
+
         final int max = 2000, min = 300;
         final int range = (max - min) + 1;
-    
+
         Random rand = new Random(System.nanoTime());
         return rand.nextInt(range) + min;
     }
