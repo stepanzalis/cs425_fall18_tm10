@@ -10,7 +10,7 @@ import java.net.Socket;
  * @author Stepan Zalis
  * created on 2018/10/16
  */
-public class WorkerTCP implements Runnable{
+public class WorkerTCP implements Runnable {
 
     private final Socket client;
     private String buffer;
@@ -91,12 +91,14 @@ public class WorkerTCP implements Runnable{
      */
     private void checkTime(RequestCounter counter) {
 
-        if ((System.currentTimeMillis() - ServerTCP.startTime) > ServerTCP.timeInterval) {
+        if ((System.currentTimeMillis() - ServerTCP.startTime) >= ServerTCP.timeInterval) {
 
             counter.setSum();
             counter.incrementCount();
             counter.print();
             counter.resetCounter();
+
+            ServerTCP.resetStartTime();
         }
     }
 

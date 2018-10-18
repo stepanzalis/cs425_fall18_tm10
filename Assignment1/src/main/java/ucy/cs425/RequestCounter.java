@@ -22,8 +22,8 @@ public class RequestCounter {
 
     public void print() {
         System.out.println("The current sum is: " + sum);
-        System.out.println("The current count is: " + counter);
-        System.out.println("The current throughput is: " + (double) sum / counter);
+        System.out.println("The current count is: " + count);
+        System.out.println("The current throughput is: " + (double) sum / count);
     }
 
     public void setNumberOfRequests() {

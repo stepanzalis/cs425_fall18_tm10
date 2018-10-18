@@ -8,10 +8,12 @@ import java.util.concurrent.Executors;
 
 public class ServerTCP {
 
-    static long startTime = System.currentTimeMillis();
+    static long startTime;
     static long timeInterval = 1000;
 
     public static void main(String[] args) {
+
+        resetStartTime();
 
         // create thread pool for 10 thread
         ExecutorService workerService = Executors.newFixedThreadPool(10);
@@ -30,5 +32,13 @@ public class ServerTCP {
         } catch (IOException io) {
             io.getLocalizedMessage();
         }
+    }
+
+    public static long getStartTime() {
+        return startTime;
+    }
+
+    public static void resetStartTime() {
+        startTime = System.currentTimeMillis();
     }
 }
