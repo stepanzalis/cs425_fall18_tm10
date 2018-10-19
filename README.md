@@ -1,7 +1,8 @@
-# CS425 Assignemt 1
+# CS425 Assignment 1
 
-## Client - server Java application created as a homework 1
+## Client - server Java application created as a Assignment 1
 ### Developed with :blue_heart: 
 
-Feel free to comment our work by adding Issue.
+### Authors: Stepan Zalis & Loukas Soleas
 
+Feel free to comment our work by adding Issue.
