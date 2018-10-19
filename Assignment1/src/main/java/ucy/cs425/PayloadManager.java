@@ -27,7 +27,7 @@ class PayloadManager {
     /**
      * @return Payload representing a string message
      */
-    public static String getPayload() {
+    static String getPayload() {
 
         long size = generateRandomNumberBetween(300, 2000) * 1024;
         StringBuilder sb = new StringBuilder();

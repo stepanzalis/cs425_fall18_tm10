@@ -14,6 +14,8 @@ import java.util.concurrent.Executors;
  */
 public class ServerTCP {
 
+    private static final int NUMBER_OF_CLIENTS = 10;
+
     static long startTime;
     static long timeInterval = 1000;
 
@@ -22,17 +24,17 @@ public class ServerTCP {
         resetStartTime();
 
         // create thread pool for 10 thread
-        ExecutorService workerService = Executors.newFixedThreadPool(10);
+        ExecutorService workerService = Executors.newFixedThreadPool(NUMBER_OF_CLIENTS);
 
         final int port = Integer.parseInt(args[0]);
-        final int numberOfRepetition = Integer.parseInt(args[1]);
+        final int numberOfRepetitions = Integer.parseInt(args[1]);
 
         try {
             ServerSocket socket = new ServerSocket(port);
 
             while (true) {
                 Socket client = socket.accept();
-                workerService.submit(new WorkerTCP(client, numberOfRepetition));
+                workerService.submit(new WorkerTCP(client, numberOfRepetitions));
             }
 
         } catch (IOException io) {
@@ -40,7 +42,7 @@ public class ServerTCP {
         }
     }
 
-    public static void resetStartTime() {
+    static void resetStartTime() {
         startTime = System.currentTimeMillis();
     }
 }

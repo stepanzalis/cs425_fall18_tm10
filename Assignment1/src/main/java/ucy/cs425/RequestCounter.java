@@ -21,12 +21,14 @@ public class RequestCounter {
     }
 
     public void print() {
+        System.out.println("################## OUTPUT ##################");
         System.out.println("The current sum is: " + sum);
         System.out.println("The current count is: " + count);
         System.out.println("The current throughput is: " + (double) sum / count);
+        System.out.println("The number of requests: " + numberOfRequests);
     }
 
-    public void setNumberOfRequests() {
+    public void incrementNumberOfRequests() {
         this.numberOfRequests += 1;
     }
 
@@ -52,5 +54,21 @@ public class RequestCounter {
 
     public int getEndCount() {
         return endCount;
+    }
+
+    public int getNumberOfRequests() {
+        return numberOfRequests;
+    }
+
+    public int getCounter() {
+        return counter;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public int getSum() {
+        return sum;
     }
 }

@@ -73,11 +73,11 @@ public class WorkerTCP implements Runnable {
 
                 // limit is the same as actual count
                 if (counter.getEndCount() == limit) {
-                    output.writeBytes("Bye bye!\n");
+                    output.writeBytes("ByeBye!" + System.lineSeparator());
                     break;
                 }
 
-                counter.setNumberOfRequests();
+                counter.incrementNumberOfRequests();
 
             } catch (IOException e) {
                 e.getLocalizedMessage();
