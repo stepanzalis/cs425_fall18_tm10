@@ -1,3 +1,4 @@
+
 package main.java.ucy.cs425;
 
 import java.io.IOException;
@@ -10,7 +11,7 @@ import java.util.concurrent.Executors;
  * Main class representing TCP Server
  * Consumes two arguments: [0] - port; [1] - limit number of requests
  *
- * @author Stepan Zalis
+ * @author Stepan Zalis Loukas Solea
  */
 public class ServerTCP {
 

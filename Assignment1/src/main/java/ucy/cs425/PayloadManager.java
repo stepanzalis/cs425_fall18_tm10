@@ -1,9 +1,10 @@
+
 package main.java.ucy.cs425;
 
 import java.util.Random;
 
 /**
- * @author Stepan Zalis
+ * @author Stepan Zalis Loukas Solea
  * created on 2018/10/16
  */
 class PayloadManager {

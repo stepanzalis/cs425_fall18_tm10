@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.net.Socket;
 
 /**
- * @author Stepan Zalis
+ * @author Stepan Zalis Loukas Solea
  * created on 2018/10/16
  */
 public class WorkerTCP implements Runnable {

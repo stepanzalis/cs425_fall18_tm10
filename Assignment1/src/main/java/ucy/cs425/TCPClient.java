@@ -1,3 +1,4 @@
+
 package main.java.ucy.cs425;
 
 import java.io.*;
@@ -13,7 +14,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * client generate a series of requests towards the server.The client sends a hello message which comprises of
  * "hello" string the client's ip and the port and the client id.
  *
- * @author 
+ * @author Stepan Zalis Loukas Solea
  */
 
 public class TCPClient {

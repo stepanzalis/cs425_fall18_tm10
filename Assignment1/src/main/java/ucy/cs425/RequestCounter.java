@@ -1,7 +1,7 @@
 package main.java.ucy.cs425;
 
 /**
- * @author Stepan Zalis
+ * @author Stepan Zalis Loukas Solea
  * created on 2018/10/18
  */
 public class RequestCounter {
