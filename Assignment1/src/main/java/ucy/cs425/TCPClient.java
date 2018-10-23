@@ -118,7 +118,7 @@ public class TCPClient {
         serverIp = (args[0]);
         port = Integer.parseInt(args[1]);
 
-        for (int i = 0; i <= NUMBER_OF_CLIENTS; i++) {
+        for (int i = 0; i < NUMBER_OF_CLIENTS; i++) {
             Client client = new Client();
             client.start();
         }
